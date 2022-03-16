@@ -1,0 +1,37 @@
+.bgwhite{
+    background-color: whitesmoke;
+  }
+.col{
+flex-direction: column;
+}
+.row{
+flex-direction: row;
+}
+.right{
+float: right;
+}
+.left-sticky{
+position: fixed;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.right-sticky{
+position: fixed;
+top: 50%;
+-webkit-transform: translateY(50%);
+-ms-transform: translateY(50%);
+transform: translateY(50%);
+}
+.hidden{
+display: none;
+}
+.border-hairline {
+box-shadow: 0 0 0 1px var(--light-grey-faded);
+}
+
+
+.left{
+float: left;
+}

@@ -1,0 +1,20 @@
+header{
+  /* margin-top: 13rem; */
+}
+section{
+  display: block;
+  padding-top: 6.2rem;
+  padding-left: 12.5rem;
+  padding-right: 5rem;
+  padding-bottom: 13rem;
+  /* margin-top: 3rem; */
+  height: max-content;
+
+}
+li{
+  width: max-content;
+  vertical-align: middle;
+}
+.content ul{
+  width:inherit;
+}

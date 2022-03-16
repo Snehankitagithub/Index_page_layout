@@ -1,0 +1,42 @@
+nav{
+      
+    height: 89px;
+     padding-left: 13%;
+     padding-right: 3%;
+       }
+ menu nav,menu ul{
+   display: flex;
+   align-items: center;
+ }
+ 
+ nav>ul{
+  
+   min-width: max-content;
+   
+   justify-content: space-between;
+   vertical-align: bottom;
+   align-items: center;
+   
+ }
+
+
+nav ul li:hover {
+   background-color: var(--grey);
+   align-items: center;
+  
+}
+nav ul li:hover>ul {
+   display: flex;
+  
+}
+
+nav ul li ul li ul {
+   position: absolute;
+   left: 100%;
+   top: 0px;
+
+}
+
+nav ul ul {
+   display: none;
+}

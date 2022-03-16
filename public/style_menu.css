@@ -1,0 +1,40 @@
+.sub{
+    position: relative;
+    padding-left: 13rem;
+    display: none;
+     z-index: 1;
+     padding-bottom: 5rem;
+  }
+
+.menu li{
+  width: max-content;
+}
+.menu li:hover > .sub {
+display: block;
+
+}
+.menu li:hover > .content {
+display: flex;
+
+}
+.menu li:hover  *{
+  color: var(--dark-grey);
+}
+.menu li:hover{
+background-color: var(--light);
+box-shadow:
+0px 2.8px 2.2px rgba(0, 0, 0, 0.005),
+0px 6.7px 5.3px rgba(0, 0, 0, 0.011),
+0px 12.5px 10px rgba(0, 0, 0, 0.02),
+0px 22.3px 17.9px rgba(0, 0, 0, 0.03),
+0px 41.8px 33.4px rgba(0, 0, 0, 0.044),
+0px 100px 80px rgba(0, 0, 0, 0.07)
+;
+}
+
+
+
+.menu li:hover > a {
+color: var(--dark-grey);
+font-weight: bold;
+}
