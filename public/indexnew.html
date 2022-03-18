@@ -26,30 +26,25 @@
     <div>
       <img src="../assets/logo/shunya/shunya logo numbers & tag line ver O-5 clean 763 X 233 dark.svg" alt="" class="logo">
     </div>
-    <div class="menu-nav">
+    <div id="menuNav" class="menu-nav">
       <ul>
-        <!-- <li><a href="#content">content</a></li> -->
-        <!-- <li><a id="nav-about" href="#about">about</a></li>
-        <li><a id="nav-work" href="#work">work</a></li>
-        <li><a id="nav-stories" href="#stories">stories</a></li> -->
-
-        <li><a id="nav-about">about</a></li>
-        <li><a id="nav-work">work</a></li>
-        <li><a id="nav-stories">stories</a></li>
-        <label class="switch">
-          <input type="checkbox" id="toggleTheme">
-          <span class="slider"></span>
-        </label>
+        <li><a id="nav-about" data-ref-article="about">about</a></li>
+        <li><a id="nav-work" data-ref-article="work">work</a></li>
+        <li><a id="nav-stories" data-ref-article="stories">stories</a></li>
       </ul>
     </div>
+    <div>
+      <input type="checkbox" id="toggleTheme" name="toggleTheme">
+      <label class="switch slider" for="toggleTheme"></label>
+    </div>
   </menu>
-  <div class="stars "></div>
+  <!-- <div class="stars "></div>
   <audio controls autoplay class="right-sticky">
     <source src="assets/sounds/256149_Run_-_Master_(16-44.1).aac" type="audio/aac">
-  </audio>
+  </audio> -->
     <main>
-      <div class="main-wrapper">
-        <article id="about" current="about">
+      <div id="mainWrapper" class="main-wrapper">
+        <article id="home" class="home" data-index="0" data-content-side="right">
           <!-- tab eg : https://typecode.com/about/-->
           <header>
             <section>
@@ -63,20 +58,20 @@
             </section>
           </header>
         </article>
-        <article class="about">
+        <article id="about" class="about" data-index="1" data-content-side="left">
           <section>
             <ul class="headings">
               <li class="hover">
                 <a href="">why</a>
                   <ul class="menu-hide">
                       <li class="hover show-headings-hover-div">
-                        <a href="#" id="our-belief">our belief</a>
+                        <a href="#" id="our-belief" data-ref-article="our-belief-article">our belief</a>
                     </li>
                     <li class="hover show-headings-hover-div">
-                      <a href="#" id="us">us</a>
+                      <a href="#" id="us" data-ref-article="us-article">us</a>
                     </li>
                     <li class="hover show-headings-hover-div">
-                      <a href="#" id="our-values">our values</a>
+                      <a href="#" id="our-values" data-ref-article="our-values-article">our values</a>
                     </li>
                   </ul>
               </li>
@@ -84,19 +79,19 @@
                 <a href="">what</a>
                 <ul class="menu-hide">
                   <li class="hover show-headings-hover-div">
-                    <a href="#" id="do-we-do">do we do</a>
+                    <a href="#" id="do-we-do" data-ref-article="do-we-do-article">do we do</a>
                   </li>
                   <li class="hover show-headings-hover-div">
-                    <a href="#" id="products">products</a>
+                    <a href="#" id="products" data-ref-article="products-article">products</a>
                   </li>
                   <li class="hover show-headings-hover-div">
-                    <a href="#" id="solutions">solutions</a>
+                    <a href="#" id="solutions" data-ref-article="solutions-article">solutions</a>
                   </li>
                   <li class="hover show-headings-hover-div">
-                    <a href="#" id="services">services</a>
+                    <a href="#" id="services" data-ref-article="services-article">services</a>
                   </li>
                   <li class="hover show-headings-hover-div">
-                    <a href="#" id="projects">projects</a>
+                    <a href="#" id="projects" data-ref-article="projects-article">projects</a>
                   </li>
                 </ul>
               </li>
@@ -130,10 +125,10 @@
             </ul>
           </section>
         </article>
-        <article class="work" id="work">
+        <article class="work" id="work" data-index="2" data-content-side="left">
           <h1>Section2</h1>
         </article>
-        <article class="stories" id="stories">
+        <article class="stories" id="stories" data-index="3" data-content-side="left">
           <section style="padding: 0;">
             <div class="stories-hero-section">
               <h2 class="bold" style="text-align: right;">disrupt.<br>
@@ -371,341 +366,176 @@
             </div>
           </section>
         </article>
-        
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="our-belief-div-left">
-          <section>
-            <p class="heading"><span class="bold">efficiency</span> creates room for creativity</p>
-            <p class="details">
-              In this era of complexity, and open data theft, there is a huge vacuum of simple, integrated, nextGen systems.<br><br>
-              We believe by simply adhering to our own values and promise, we can fill that gap. <br>In simpler words, make the world efficient, safe and integrated.<br><br>
-            </p>
-            <span class="font-size-1-8 font-weight-300 color-light-grey">
-              we adhere to our principles of
-              <ul class="font-size-1-8 bullets">
-                <li>make mistakes</li>
-                <li>no deadlines</li>
-                <li>where ever you are it's a start</li>
-                <li>every click matters</li>
-              </ul>
-              </span>
-          </section>
-      </div>
-      <div class="headings-hover-div headings-hover-div-right" id="our-belief-div-right">
-        <section>
-          <p class="heading"><span class="bold">efficiency</span> creates room for creativity</p>
-          <p class="details">
-            In this era of complexity, and open data theft, there is a huge vacuum of simple, integrated, nextGen systems.<br><br>
-            We believe by simply adhering to our own values and promise, we can fill that gap. <br>In simpler words, make the world efficient, safe and integrated.<br><br>
-          </p>
-          <span class="font-size-1-8 font-weight-300 color-light-grey">
-            we adhere to our principles of
-            <ul class="font-size-1-8 bullets">
-              <li>make mistakes</li>
-              <li>no deadlines</li>
-              <li>where ever you are it's a start</li>
-              <li>every click matters</li>
-            </ul>
-            </span>
-        </section>
-      </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="us-div-left">
-          <section>
-            <p>
-              Do we know algorithms & coding languages best in the world?<br>
-              <span class="bold heading">No</span><br>
-              Do we understand technology & experiences in the simplest of the form?<br>
-              Big <span class="bold heading">yes.</span><br>
-              Just like kids opening up a radio we get excited on seeing a user pain point, or a workflow problem to meet it's simplest/correct solution.
-            </p>
-          </section>
+      <section id="hoverArticlesContainer" class="hover-articles-container" data-content-side="left">
+        <article id="our-belief-article" >
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p class="heading"><span class="bold">efficiency</span> creates room for creativity</p>
+              <p class="details">
+                In this era of complexity, and open data theft, there is a huge vacuum of simple, integrated, nextGen systems.<br><br>
+                We believe by simply adhering to our own values and promise, we can fill that gap. <br>In simpler words, make the world efficient, safe and integrated.<br><br>
+              </p>
+              <span class="font-size-1-8 font-weight-300 color-light-grey">
+                we adhere to our principles of
+                <ul class="font-size-1-8 bullets">
+                  <li>make mistakes</li>
+                  <li>no deadlines</li>
+                  <li>where ever you are it's a start</li>
+                  <li>every click matters</li>
+                </ul>
+                </span>
+            </section>
         </div>
-        <div class="headings-hover-div headings-hover-div-right" id="us-div-right">
-          <section>
-            <p>
-              Do we know algorithms & coding languages best in the world?<br>
-              <span class="bold heading">No</span><br>
-              Do we understand technology & experiences in the simplest of the form?<br>
-              Big <span class="bold heading">yes.</span><br>
-              Just like kids opening up a radio we get excited on seeing a user pain point, or a workflow problem to meet it's simplest/correct solution.
-            </p>
-          </section>
-        </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="our-values-div-left">
-          <section>
-            <p>
-              <span class="heading bold">truthful | loyal | agile</span>
-            </p>
-            <p>
-              these words shape the big decisions we make everyday. the art technology I business decisions. how we collaborate with our colleagues | tribe within and outside we are set out to develop an Ecosystem for an efficient future.<br><br>
-              Honouring our past and working together in tandem with our Tribe, we are not afraid to make mistakes.
-            </p>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="our-values-div-right">
-          <section>
-            <p>
-              <span class="heading bold">truthful | loyal | agile</span>
-            </p>
-            <p>
-              these words shape the big decisions we make everyday. the art technology I business decisions. how we collaborate with our colleagues | tribe within and outside we are set out to develop an Ecosystem for an efficient future.<br><br>
-              Honouring our past and working together in tandem with our Tribe, we are not afraid to make mistakes.
-            </p>
-          </section>
-        </div>
-      </article>
-
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="do-we-do-div-left">
-          <section>
-            <h2 style="text-align: right;" class="heading-2 font-weight-300">Your <span class="bold">next set</span> of <br><span class="bold">WorkTools</span></h2>
-            <p>
-              We work with <span class="bold">teams, small-business, enterprises</span> & govt to make their <span class="bold">work-processes</span> & systems efficient, with focus on <span class="bold">automation, integration</span> and <span class="bold">data privacy.</span>
-              <br><br>
-              Provide <span class="bold">bespoke</span> customised solution for the same.
-              <br><br>
-              Our tools are crafted for <span class="bold">creative professioanals</span> from, our <span class="bold">focus target group.</span>
-            </p>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="do-we-do-div-right">
-          <section>
-            <h2 style="text-align: right;" class="heading-2 font-weight-300">Your <span class="bold">next set</span> of <br><span class="bold">WorkTools</span></h2>
-            <p>
-              We work with <span class="bold">teams, small-business, enterprises</span> & govt to make their <span class="bold">work-processes</span> & systems efficient, with focus on <span class="bold">automation, integration</span> and <span class="bold">data privacy.</span>
-              <br><br>
-              Provide <span class="bold">bespoke</span> customised solution for the same.
-              <br><br>
-              Our tools are crafted for <span class="bold">creative professioanals</span> from, our <span class="bold">focus target group.</span>
-            </p>
-          </section>
-        </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="products-div-left">
-          <section style="padding: 4.6rem 1.5rem;">
-            <div style="display: flex; justify-content: space-between;">
-              <div>
-                
-                  <div class="" style="font-size: 4.3rem; margin-top: 7rem;font-weight: lighter;">releasing</div><div class="soon" style="position: relative;top: -0.7rem;font-size: 4.1rem; left: 17.8rem;">soon</div>
-                  <div style="margin-top:1.9rem;font-size: 1.5rem;margin-left: 1rem;">Our ready to be shipped products.</div>
-                  <div style="margin-top:-0.4rem;font-size: 1.5rem;margin-left: 1rem;">awaiting your action.</div>
-                
-              </div>
-              <div style="display: flex; align-items: end;padding-bottom: 3.2rem;padding-right: 1.8rem;">
-                <div style="font-size: 1.2rem;line-height: 1.8rem;">
-                  <div>FILTER BY YOUR PROFILE</div>
-                  <select class="bold" style="font-size: 1.5rem;outline: none;width: 25.5rem;">
-                    <option selected>CREATIVE DIRECTOR</option>
-                    
-                  </select>
+        </article>
+        <article id="us-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p>
+                Do we know algorithms & coding languages best in the world?<br>
+                <span class="bold heading">No</span><br>
+                Do we understand technology & experiences in the simplest of the form?<br>
+                Big <span class="bold heading">yes.</span><br>
+                Just like kids opening up a radio we get excited on seeing a user pain point, or a workflow problem to meet it's simplest/correct solution.
+              </p>
+            </section>
+          </div>
+        </article>
+        <article id="our-values-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p>
+                <span class="heading bold">truthful | loyal | agile</span>
+              </p>
+              <p>
+                these words shape the big decisions we make everyday. the art technology I business decisions. how we collaborate with our colleagues | tribe within and outside we are set out to develop an Ecosystem for an efficient future.<br><br>
+                Honouring our past and working together in tandem with our Tribe, we are not afraid to make mistakes.
+              </p>
+            </section>
+          </div>
+        </article>
+        <article id="do-we-do-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <h2 style="text-align: right;" class="heading-2 font-weight-300">Your <span class="bold">next set</span> of <br><span class="bold">WorkTools</span></h2>
+              <p>
+                We work with <span class="bold">teams, small-business, enterprises</span> & govt to make their <span class="bold">work-processes</span> & systems efficient, with focus on <span class="bold">automation, integration</span> and <span class="bold">data privacy.</span>
+                <br><br>
+                Provide <span class="bold">bespoke</span> customised solution for the same.
+                <br><br>
+                Our tools are crafted for <span class="bold">creative professioanals</span> from, our <span class="bold">focus target group.</span>
+              </p>
+            </section>
+          </div>
+        </article>
+        <article id="products-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section style="padding: 4.6rem 1.5rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <div>
+                  
+                    <div class="" style="font-size: 4.3rem; margin-top: 7rem;font-weight: lighter;">releasing</div><div class="soon" style="position: relative;top: -0.7rem;font-size: 4.1rem; left: 17.8rem;">soon</div>
+                    <div style="margin-top:1.9rem;font-size: 1.5rem;margin-left: 1rem;">Our ready to be shipped products.</div>
+                    <div style="margin-top:-0.4rem;font-size: 1.5rem;margin-left: 1rem;">awaiting your action.</div>
+                  
+                </div>
+                <div style="display: flex; align-items: end;padding-bottom: 3.2rem;padding-right: 1.8rem;">
+                  <div style="font-size: 1.2rem;line-height: 1.8rem;">
+                    <div>FILTER BY YOUR PROFILE</div>
+                    <select class="bold" style="font-size: 1.5rem;outline: none;width: 25.5rem;">
+                      <option selected>CREATIVE DIRECTOR</option>
+                      
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div style="display: flex;gap:5px;margin-top: 3rem;">
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-            </div>
-            <div class="products-display-details-btns-section">
-              <a>previous</a>
-              <a>next</a>
-            </div>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="products-div-right">
-          <section style="padding: 4.6rem 1.5rem 0 0;">
-            <div style="display: flex; justify-content: space-between;">
-              <div>
-                
-                  <div class="" style="font-size: 4.3rem; margin-top: 7rem;font-weight: lighter;">releasing</div><div class="soon" style="position: relative;top: -0.7rem;font-size: 4.1rem; left: 17.8rem;">soon</div>
-                  <div style="margin-top:1.9rem;font-size: 1.5rem;margin-left: 1rem;">Our ready to be shipped products.</div>
-                  <div style="margin-top:-0.4rem;font-size: 1.5rem;margin-left: 1rem;">awaiting your action.</div>
-                
+              <div style="display: flex;gap:5px;margin-top: 3rem;">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
               </div>
-              <div style="display: flex; align-items: end;padding-bottom: 3.2rem;padding-right: 1.8rem;">
-                <div style="font-size: 1.2rem;line-height: 1.8rem;">
-                  <div>FILTER BY YOUR PROFILE</div>
-                  <select class="bold" style="font-size: 1.5rem;outline: none;width: 25.5rem;">
-                    <option selected>CREATIVE DIRECTOR</option>
-                    
-                  </select>
-                </div>
+              <div class="products-display-details-btns-section">
+                <a>previous</a>
+                <a>next</a>
               </div>
-            </div>
-            <div style="display: flex;gap:5px;margin-top: 3rem;">
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-              <div class="card"></div>
-            </div>
-            <div class="products-display-details-btns-section">
-              <a>previous</a>
-              <a>next</a>
-            </div>
-          </section>
-        </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="solutions-div-left">
-          <section>
-            <p style="font-size:1.4rem;line-height: 1.42;margin-top: 9rem;margin-bottom: 1.9rem;">
-              Our solutions make it easy to share expertise, resources, and assets, amongst a virtual workforce.
-              <br>
-              <br>
-              A secure, collaborative, real-time work environment for teams to achieve efficient Creativity.
-              <br>
-              <br>
-              Developed on open-source hybrid ecosystem, lets our user get best of both offline and online systems.
-              <br>
-              <br>                 
-              Helps us cut the pricing low.
-              <br>
-              <br>        
-              Whether your concern is data security or automation or seamless integration, we have a solution tailored just for you.
-              <br>
-              <br>
+            </section>
+          </div>
+        </article>
+        <article id="solutions-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p style="font-size:1.4rem;line-height: 1.42;margin-top: 9rem;margin-bottom: 1.9rem;">
+                Our solutions make it easy to share expertise, resources, and assets, amongst a virtual workforce.
+                <br>
+                <br>
+                A secure, collaborative, real-time work environment for teams to achieve efficient Creativity.
+                <br>
+                <br>
+                Developed on open-source hybrid ecosystem, lets our user get best of both offline and online systems.
+                <br>
+                <br>                 
+                Helps us cut the pricing low.
+                <br>
+                <br>        
+                Whether your concern is data security or automation or seamless integration, we have a solution tailored just for you.
+                <br>
+                <br>
+                <ul class="solutions-display-details-ul">
+                  <li>design-Sytems</li>
+                  <li>Process Based Blueprints</li>
+                  <li>actionOAuthl</li>
+                  <li>CMS</li>
+                  <li>streamline content production</li>
+                  <li>real-Time automated content management systems</li>
+                  <li>knowledge center / second brain</li>
+                </ul>
+              </p>
+            </section>
+          </div>
+        </article>
+        <article id="services-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p class="heading bold">
+                Story-telling of any form, with focus on
+              </p>
+                <ul class="solutions-display-details-ul">
+                  <li>no-code solutions</li>
+                  <li>digital product development</li>
+                  <li>webApp development</li>
+                  <li>Api integration</li>
+                  <li>workflow system design custom blue-prints & templates</li>
+                  <li>digital content</li>
+                  <li>Immersive - experience</li>
+                </ul>
+            </section>
+          </div>
+        </article>
+        <article id="projects-article">
+          <div class="headings-hover-div headings-hover-div-left">
+            <section>
+              <p class="heading bold">
+                projects evolve to products,
+                <br>
+                usually they begin as an idea.
+              </p>
               <ul class="solutions-display-details-ul">
-                <li>design-Sytems</li>
-                <li>Process Based Blueprints</li>
-                <li>actionOAuthl</li>
-                <li>CMS</li>
-                <li>streamline content production</li>
-                <li>real-Time automated content management systems</li>
-                <li>knowledge center / second brain</li>
+                <li>pari.css</li>
+                <li>action Engine.</li>
+                <li>ehh.</li>
+                <li>kaiyaan</li>
+                <li>let no idea die</li>
+                <li>india@4Pm</li>
+                <li>coronaTimes</li>
               </ul>
-            </p>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="solutions-div-right">
-          <section>
-            <p style="font-size:1.4rem;line-height: 1.42;margin-top: 9rem;margin-bottom: 1.9rem;">
-              Our solutions make it easy to share expertise, resources, and assets, amongst a virtual workforce.
-              <br>
-              <br>
-              A secure, collaborative, real-time work environment for teams to achieve efficient Creativity.
-              <br>
-              <br>
-              Developed on open-source hybrid ecosystem, lets our user get best of both offline and online systems.
-              <br>
-              <br>                 
-              Helps us cut the pricing low.
-              <br>
-              <br>        
-              Whether your concern is data security or automation or seamless integration, we have a solution tailored just for you.
-              <br>
-              <br>
-              <ul class="solutions-display-details-ul">
-                <li>design-Sytems</li>
-                <li>Process Based Blueprints</li>
-                <li>actionOAuthl</li>
-                <li>CMS</li>
-                <li>streamline content production</li>
-                <li>real-Time automated content management systems</li>
-                <li>knowledge center / second brain</li>
-              </ul>
-            </p>
-          </section>
-        </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="services-div-left">
-          <section>
-            <p class="heading bold">
-              Story-telling of any form, with focus on
-            </p>
-              <ul class="solutions-display-details-ul">
-                <li>no-code solutions</li>
-                <li>digital product development</li>
-                <li>webApp development</li>
-                <li>Api integration</li>
-                <li>workflow system design custom blue-prints & templates</li>
-                <li>digital content</li>
-                <li>Immersive - experience</li>
-              </ul>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="services-div-right">
-          <section>
-            <p class="heading bold">
-              Story-telling of any form, with focus on
-            </p>
-              <ul class="solutions-display-details-ul">
-                <li>no-code solutions</li>
-                <li>digital product development</li>
-                <li>webApp development</li>
-                <li>Api integration</li>
-                <li>workflow system design custom blue-prints & templates</li>
-                <li>digital content</li>
-                <li>Immersive - experience</li>
-              </ul>
-          </section>
-        </div>
-      </article>
-      <article>
-        <div class="headings-hover-div headings-hover-div-left" id="projects-div-left">
-          <section>
-            <p class="heading bold">
-              projects evolve to products,
-              <br>
-              usually they begin as an idea.
-            </p>
-            <ul class="solutions-display-details-ul">
-              <li>pari.css</li>
-              <li>action Engine.</li>
-              <li>ehh.</li>
-              <li>kaiyaan</li>
-              <li>let no idea die</li>
-              <li>india@4Pm</li>
-              <li>coronaTimes</li>
-            </ul>
-          </section>
-        </div>
-        <div class="headings-hover-div headings-hover-div-right" id="projects-div-right">
-          <section>
-            <p class="heading bold">
-              projects evolve to products,
-              <br>
-              usually they begin as an idea.
-            </p>
-            <ul class="solutions-display-details-ul">
-              <li>pari.css</li>
-              <li>action Engine.</li>
-              <li>ehh.</li>
-              <li>kaiyaan</li>
-              <li>let no idea die</li>
-              <li>india@4Pm</li>
-              <li>coronaTimes</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+            </section>
+          </div>
+        </article>
+      </section>
+      
     </main>
 </body>
 
