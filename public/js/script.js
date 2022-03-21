@@ -1,4 +1,6 @@
 const mainWrapper = document.getElementById("mainWrapper");
+const hoverArticlesContainer = document.getElementById("hoverArticlesContainer");
+
 function movePage(i, width) {
   i = parseInt(i);
   if (i === NaN) {
@@ -10,6 +12,12 @@ function movePage(i, width) {
     return;
   }
 
+  let activeArticle = hoverArticlesContainer.querySelector("article.headings-hover-div[data-is-active]");
+  if (activeArticle) {
+    activeArticle.removeAttribute("data-is-active");
+    activeArticle.style.display = "none";
+    hoverArticlesContainer.removeAttribute("data-content-side");
+  }
   mainWrapper.style.transform = `translateX(${-(i-1)*width}px)`;
 }
 
@@ -27,7 +35,7 @@ navItems.forEach(item => {
   });
 });
 
-const hoverArticlesContainer = document.getElementById("hoverArticlesContainer");
+
 [
   "our-belief",
   "us",
@@ -40,7 +48,6 @@ const hoverArticlesContainer = document.getElementById("hoverArticlesContainer")
 ].forEach(id => {
   let elem = document.getElementById(id);
   elem.addEventListener("mouseover", function (e) {
-    console.log(e);
     let refArticleId = this.getAttribute("data-ref-article").trim();
     let refArticle = document.getElementById(refArticleId);
     let activeSect = e.path[e.path.indexOf(mainWrapper) - 1];
@@ -50,9 +57,17 @@ const hoverArticlesContainer = document.getElementById("hoverArticlesContainer")
       activeSide = activeSect.getAttribute("data-content-side");
     }
 
+    let activeArticle = document.querySelector('.hover-articles-container>article.headings-hover-div[data-is-active]');
+
+    if (activeArticle) {
+      activeArticle.removeAttribute("data-is-active");
+      activeArticle.style.display = "none";
+      // hoverArticlesContainer.removeAttribute("data-content-side");
+    }
+
     if (refArticle) {
-      refArticle.style.display = "block";
       hoverArticlesContainer.setAttribute("data-content-side", activeSide);
+      refArticle.style.display = "block";
     }
 
   });
@@ -61,11 +76,17 @@ const hoverArticlesContainer = document.getElementById("hoverArticlesContainer")
     let refArticleId = this.getAttribute("data-ref-article").trim();
     let refArticle = document.getElementById(refArticleId);
 
-    if (refArticle) {
+    if (refArticle && !refArticle.getAttribute("data-is-active")) {
       refArticle.style.display = "none";
       hoverArticlesContainer.removeAttribute("data-content-side");
     }
+  });
 
+  elem.addEventListener("click", function (e) {
+    let refArticleId = this.getAttribute("data-ref-article").trim();
+    let refArticle = document.getElementById(refArticleId);
+
+    refArticle.setAttribute("data-is-active", true);
   })
 })
 
@@ -73,79 +94,11 @@ const hoverArticlesContainer = document.getElementById("hoverArticlesContainer")
 document.getElementById("toggleTheme").addEventListener("click", function (e) {
   document.body.setAttribute("data-theme", this.checked ? "dark" : "light");
   if (this.checked) {
-    document.querySelector(".logo").src = "../assets/logo/shunya/shunya-logo-ver-O-5-clean-light.svg";
+    document.querySelector(".logo img").src = "../assets/logo/shunya/shunya-logo-ver-O-5-clean-light.svg";
   } else {
-    document.querySelector(".logo").src = "../assets/logo/shunya/shunya logo numbers & tag line ver O-5 clean 763 X 233 dark.svg";
+    document.querySelector(".logo img").src = "../assets/logo/shunya/shunya logo numbers & tag line ver O-5 clean 763 X 233 dark.svg";
   }
 });
-
-// function sideDivView(clickBtn, detailsDiv) {
-//   document.querySelector(`#${clickBtn}`).addEventListener("mouseover", () => {
-//     if (atAbout) {
-//       document.querySelector(`#${detailsDiv}-left`).classList.add("displayBlock");
-//       document.querySelector(`#${detailsDiv}-left`).classList.remove("displayNone");
-//     } else {
-//       document.querySelector(`#${detailsDiv}-right`).classList.add("displayBlock")
-//       document.querySelector(`#${detailsDiv}-right`).classList.remove("displayNone")
-//     }
-//   });
-//   document.querySelector(`#${clickBtn}`).addEventListener("mouseout", () => {
-//     if (atAbout) {
-//       if (document.querySelector(`#${detailsDiv}-left`).classList.contains("Clicked")) {
-//         document.querySelector(`#${detailsDiv}-left`).classList.add("displayBlock");
-//         document.querySelector(`#${detailsDiv}-left`).classList.remove("displayNone");
-//       } else {
-//         document.querySelector(`#${detailsDiv}-left`).classList.add("displayNone");
-//         document.querySelector(`#${detailsDiv}-left`).classList.remove("displayBlock");
-//       }
-//     } else {
-//       if (document.querySelector(`#${detailsDiv}-right`).classList.contains("Clicked")) {
-//         document.querySelector(`#${detailsDiv}-right`).classList.add("displayBlock");
-//         document.querySelector(`#${detailsDiv}-right`).classList.remove("displayNone");
-//       } else {
-//         document.querySelector(`#${detailsDiv}-right`).classList.add("displayNone");
-//         document.querySelector(`#${detailsDiv}-right`).classList.remove("displayBlock");
-//       }
-//     }
-//   });
-//   document.querySelector(`#${clickBtn}`).addEventListener("click", (e) => {
-//     e.stopPropagation();
-//     if (atAbout) {
-//       document.querySelector(`#${detailsDiv}-left`).classList.add("displayBlock");
-//       document.querySelector(`#${detailsDiv}-left`).classList.add("Clicked");
-//       document.querySelector(`#${detailsDiv}-left`).classList.remove("displayNone");
-//     } else {
-//       document.querySelector(`#${detailsDiv}-right`).classList.add("displayBlock");
-//       document.querySelector(`#${detailsDiv}-right`).classList.add("Clicked");
-//       document.querySelector(`#${detailsDiv}-right`).classList.remove("displayNone");
-//     }
-//   });
-//   document.querySelector(`.about`).addEventListener("click", () => {
-//     hideLeftRightContainers();
-//   });
-//   document.querySelector(`menu`).addEventListener("click", () => {
-//     hideLeftRightContainers();
-//   });
-
-//   function hideLeftRightContainers() {
-//     document.querySelector(`#${detailsDiv}-left`).classList.add("displayNone");
-//     document.querySelector(`#${detailsDiv}-left`).classList.remove("displayBlock");
-//     document.querySelector(`#${detailsDiv}-left`).classList.remove("Clicked");
-
-//     document.querySelector(`#${detailsDiv}-right`).classList.add("displayNone");
-//     document.querySelector(`#${detailsDiv}-right`).classList.remove("displayBlock");
-//     document.querySelector(`#${detailsDiv}-right`).classList.remove("Clicked");
-//   }
-// }
-
-// sideDivView(`our-belief`, `our-belief-div`);
-// sideDivView(`us`, `us-div`);
-// sideDivView(`our-values`, `our-values-div`);
-// sideDivView(`do-we-do`, `do-we-do-div`);
-// sideDivView(`products`, `products-div`);
-// sideDivView(`solutions`, `solutions-div`);
-// sideDivView(`services`, `services-div`);
-// sideDivView(`projects`, `projects-div`);
 
 
 // function accordion() {
